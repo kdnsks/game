@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Своя игра</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	 <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="bg col-12 pl-0 pr-0">
+		<div class="header row pl-0 pt-1 shadow-lg bg-white rounded">
+			<div class="col-1 logo mx-auto rounded-circle" style="display: none;">
+				<h3 style="margin-left: 200px; margin-top: 50px; font-family: Cramaten;font-size: 55px; display: none;">Очки:<span class="score">0</span></h3>
+			</div>
+		</div>
+		<div class="col-9 mx-auto welcome" style="display: block;">
+			<div class="col-6 welcomelogo mx-auto"></div>
+			<div class="row col-6 mx-auto pl-5">
+				<button type="button" class="btn btn-primary font ml-5" data-toggle="modal" data-target="#exampleModal">КАК ИГРАТЬ?</button>
+				<div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title pravila text-center" id="exampleModalLabel" style="font-size: 50px;">ПРАВИЛА:</h1>
+							      </div>
+							      <div class="modal-body pravila text-center">
+							        <p>1. Выбери нужную тебе категорию и нажми на неё</p>
+							        <p>2. В появившимся окне нажимай на правильный ответ и получай очки, которые видны сверху!</p>
+							        <p>3. Если ты нажал на неправильный ответ - не расстраивайся, ты не потеряешь свои очки</p>
+							        <p>4. Если ты набрал 2500 очков, то появится окно с супер-игрой, что даст доп. очки!</p>
+							        <p>5. Если ты прошёлся по всем категориям, то поздравляю, ты - победитель!</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+				<button type="button" class="btn btn-warning font ml-5">НАЧАТЬ ИГРУ</button>
+			</div>	
+		</div>
+		<div class="col-9 pl-0 pr-0 mt-5 questionbox" style="display: none;">
+			<div class="row">
+				<div class="col-3 pl-0 pr-0">
+					<div class="col-12 border border-warning question" ><p class="mt-2">ИНФОРМАТИКА</p></div>
+					
+					<div class="col-12 border border-warning question"><p class="mt-2">ФИЛЬМЫ</p></div>
+					<div class="col-12 border border-warning question"><p class="mt-2">ВСЁ О ЕДЕ</p></div>
+					<div class="col-12 border border-warning question"><p class="mt-2">КОРОНАВИРУС</p></div>
+					<div class="col-12 border border-warning question"><p class="mt-2">ИГРЫ</p></div>
+				</div>
+				<div class="col-9">
+					<div class="row">
+						<div class="col-2 border border-warning question info1">
+							<p class="mt-2 infotext1" data-toggle="modal" data-target="#exampleModal1">100</p>
+							<div class="modal fade bd-example-modal-lg" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title" id="exampleModalLabel1">ВОПРОС ЗА 100. ИНФОРМАТИКА</h1>
+							      </div>
+							      <div class="modal-body">
+							        <h1>ЧТО ТАКОЕ SUBLIME TEXT 3?</h1>
+							        <div class="img" style="background-image: url(sublime.png);"></div>
+							        <p class="iq1 quiz">1) Компьютерная игра</p>
+							        <p class="iq2 quiz">2) Текстовый редактор</p>
+							        <p class="iq3 quiz">3) Люксовый бренд одежды</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-2 border border-warning question info2">
+							<p class="mt-2 infotext2" data-toggle="modal" data-target="#exampleModal2">200</p>
+							<div class="modal fade bd-example-modal-lg" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title" id="exampleModalLabel2">ВОПРОС ЗА 200. ИНФОРМАТИКА</h1>
+							      </div>
+							      <div class="modal-body">
+							       <h1>За единицу измерения количества информации принят…</h1>
+							       <div class="img" style="background-image: url(2iq.jpg);"></div>
+							        <p class="iq4 quiz">1) 1 бит</p>
+							        <p class="iq5 quiz">2) 1 бод</p>
+							        <p class="iq6 quiz">3) 1 байт</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-2 border border-warning question info3">
+							<p class="mt-2 infotext3" data-toggle="modal" data-target="#exampleModal3">300</p>
+							<div class="modal fade bd-example-modal-lg" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title" id="exampleModalLabel3">ВОПРОС ЗА 300. ИНФОРМАТИКА</h1>
+							      </div>
+							      <div class="modal-body">
+							        <h1>Производительность работы компьютера (быстрота выполнения операций) зависит от…</h1>
+							        <div class="img" style="background-image: url(3iq.jpg);"></div>
+							        <p class="iq7 quiz">1) Размера экрана дисплея</p>
+							        <p class="iq8 quiz">2) Быстроты нажатия на клавиши</p>
+							        <p class="iq9 quiz">3) Частоты процессора</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-2 border border-warning question info4">
+							<p class="mt-2 infotext4" data-toggle="modal" data-target="#exampleModal4">400</p>
+							<div class="modal fade bd-example-modal-lg" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title" id="exampleModalLabel4">ВОПРОС ЗА 400. ИНФОРМАТИКА</h1>
+							      </div>
+							      <div class="modal-body">
+							       <h1>Кто создал Phyton?</h1>
+							       <div class="img" style="background-image: url(4iq.jpg);"></div>
+							        <p class="iq10 quiz">1) Ларри Уолл</p>
+							        <p class="iq11 quiz">2) Гвидо ван Россум</p>
+							        <p class="iq12 quiz">3) Юкихиро Мацумото</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-2 border border-warning question info5">
+							<p class="mt-2 infotext5" data-toggle="modal" data-target="#exampleModal5">500</p>
+							<div class="modal fade bd-example-modal-lg" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel5" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title" id="exampleModalLabel5">ВОПРОС ЗА 500. ИНФОРМАТИКА</h1>
+							      </div>
+							      <div class="modal-body">
+							        <h1>Функция периферийных устройств:</h1>
+							        <div class="img" style="background-image: url(5iq.jpg);"></div>
+							        <p class="iq13 quiz">1) Ввод и вывод информации</p>
+							        <p class="iq14 quiz">2) Хранение информации</p>
+							        <p class="iq15 quiz">3) Обработка информации</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2 border border-warning question info6">
+							<p class="mt-2 infotext6" data-toggle="modal" data-target="#exampleModal6">100</p>
+							<div class="modal fade bd-example-modal-lg" id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel6" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title" id="exampleModalLabel6">ВОПРОС ЗА 100. ФИЛЬМЫ</h1>
+							      </div>
+							      <div class="modal-body">
+							        <h1>ИЗ КАКОГО ФИЛЬМА ЭТОТ КАДР?</h1>
+							        <div class="img" style="background-image: url(1fq.jpg);"></div>
+							        <p class="fq1 quiz">1) Джон Уик 3</p>
+							        <p class="fq2 quiz">2) Паразиты</p>
+							        <p class="fq3 quiz">3) Джеки Чан</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-2 border border-warning question info7">
+							<p class="mt-2 infotext7" data-toggle="modal" data-target="#exampleModal7">200</p>
+							<div class="modal fade bd-example-modal-lg" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel7" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title" id="exampleModalLabel7">ВОПРОС ЗА 200. ФИЛЬМЫ</h1>
+							      </div>
+							      <div class="modal-body">
+							       <h1>ИЗ КАКОГО ФИЛЬМА ЭТОТ КАДР?</h1>
+							       <div class="img" style="background-image: url(2fq.jpg);"></div>
+							        <p class="fq4 quiz">1) Чудо-женщина</p>
+							        <p class="fq5 quiz">2) Остров фантазий</p>
+							        <p class="fq6 quiz">3) Изгой</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-2 border border-warning question info8">
+							<p class="mt-2 infotext8" data-toggle="modal" data-target="#exampleModal8">300</p>
+							<div class="modal fade bd-example-modal-lg" id="exampleModal8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel8" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title" id="exampleModalLabel8">ВОПРОС ЗА 300. ФИЛЬМЫ</h1>
+							      </div>
+							      <div class="modal-body">
+							        <h1>ИЗ КАКОГО ФИЛЬМА ЭТОТ КАДР?</h1>
+							        <div class="img" style="background-image: url(3fq.jpg);"></div>
+							        <p class="fq7 quiz">1) Король комедии</p>
+							        <p class="fq8 quiz">2) Мама</p>
+							        <p class="fq9 quiz">3) Джокер</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-2 border border-warning question info9">
+							<p class="mt-2 infotext9" data-toggle="modal" data-target="#exampleModal9">400</p>
+							<div class="modal fade bd-example-modal-lg" id="exampleModal9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel9" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title" id="exampleModalLabel9">ВОПРОС ЗА 400. ФИЛЬМЫ</h1>
+							      </div>
+							      <div class="modal-body">
+							       <h1>ИЗ КАКОГО ФИЛЬМА ЭТОТ КАДР?</h1>
+							       <div class="img" style="background-image: url(4fq.jpg);"></div>
+							        <p class="fq10 quiz">1) Леди Бёрд</p>
+							        <p class="fq11 quiz">2) Маленькие женщины</p>
+							        <p class="fq12 quiz">3) Улыбка Моно Лизы</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-2 border border-warning question info10">
+							<p class="mt-2 infotext10" data-toggle="modal" data-target="#exampleModal10">500</p>
+							<div class="modal fade bd-example-modal-lg" id="exampleModal10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel10" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title" id="exampleModalLabel10">ВОПРОС ЗА 500. ФИЛЬМЫ</h1>
+							      </div>
+							      <div class="modal-body">
+							        <h1>ИЗ КАКОГО ФИЛЬМА ЭТОТ КАДР?</h1>
+							        <div class="img" style="background-image: url(5fq.jpg);"></div>
+							        <p class="fq13 quiz">1) Зомбилэнд</p>
+							        <p class="fq14 quiz">2) Поезд в Пусан</p>
+							        <p class="fq15 quiz">3) Война миров Z</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2 border border-warning question info11">
+							<p class="mt-2 infotext11" data-toggle="modal" data-target="#exampleModal11">100</p>
+							<div class="modal fade bd-example-modal-lg" id="exampleModal11" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel11" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title" id="exampleModalLabel11">ВОПРОС ЗА 100. ВСЁ О ЕДЕ</h1>
+							      </div>
+							      <div class="modal-body">
+							        <h1>Как называется сладкая субстанция, которую производят пчёлы?</h1>
+							        <div class="img" style="background-image: url(1eq.jpg);"></div>
+							        <p class="eq1 quiz">1) Варенье</p>
+							        <p class="eq2 quiz">2) Чили</p>
+							        <p class="eq3 quiz">3) Мёд</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-2 border border-warning question info12">
+							<p class="mt-2 infotext12" data-toggle="modal" data-target="#exampleModal12">200</p>
+							<div class="modal fade bd-example-modal-lg" id="exampleModal12" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel12" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title" id="exampleModalLabel12">ВОПРОС ЗА 200. ВСЁ О ЕДЕ</h1>
+							      </div>
+							      <div class="modal-body">
+							       <h1>Как называется популярный рецепт приготовления макарон с мясом?</h1>
+							       <div class="img" style="background-image: url(2eq.jpg);"></div>
+							        <p class="eq4 quiz">1) По-братски</p>
+							        <p class="eq5 quiz">2) По-флотски</p>
+							        <p class="eq6 quiz">3) По-божески</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-2 border border-warning question info13">
+							<p class="mt-2 infotext13" data-toggle="modal" data-target="#exampleModal13">300</p>
+							<div class="modal fade bd-example-modal-lg" id="exampleModal13" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel13" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title" id="exampleModalLabel13">ВОПРОС ЗА 300. ВСЁ О ЕДЕ</h1>
+							      </div>
+							      <div class="modal-body">
+							        <h1>Какой продукт используется в качестве основы для соуса гуакамоле?</h1>
+							        <div class="img" style="background-image: url(3eq.jpg);"></div>
+							        <p class="eq7 quiz">1) Фейхоа</p>
+							        <p class="eq8 quiz">2) Апельсин</p>
+							        <p class="eq9 quiz">3) Авокадо</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-2 border border-warning question info14">
+							<p class="mt-2 infotext14" data-toggle="modal" data-target="#exampleModal14">400</p>
+							<div class="modal fade bd-example-modal-lg" id="exampleModal14" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel14" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title" id="exampleModalLabel14">ВОПРОС ЗА 400. ВСЁ О ЕДЕ</h1>
+							      </div>
+							      <div class="modal-body">
+							       <h1>От чего можно отказаться, питаясь фасолью, поскольку её белок по своему составу очень похож на животные белки?</h1>
+							       <div class="img" style="background-image: url(4eq.jpg);"></div>
+							        <p class="eq10 quiz">1) Мяса</p>
+							        <p class="eq11 quiz">2) Шоколада</p>
+							        <p class="eq12 quiz">3) Овощей</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-2 border border-warning question info15">
+							<p class="mt-2 infotext15" data-toggle="modal" data-target="#exampleModal15">500</p>
+							<div class="modal fade bd-example-modal-lg" id="exampleModal15" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel15" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title" id="exampleModalLabel15">ВОПРОС ЗА 500. ВСЁ О ЕДЕ</h1>
+							      </div>
+							      <div class="modal-body">
+							        <h1>В какой стране впервые появилась сеть ресторанов Пицца Хат?</h1>
+							        <div class="img" style="background-image: url(5eq.jpg);"></div>
+							        <p class="eq13 quiz">1) Италия</p>
+							        <p class="eq14 quiz">2) США</p>
+							        <p class="eq15 quiz">3) Бразилия</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2 border border-warning question info16">
+							<p class="mt-2 infotext16" data-toggle="modal" data-target="#exampleModal16">100</p>
+							<div class="modal fade bd-example-modal-lg" id="exampleModal16" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel16" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title" id="exampleModalLabel16">ВОПРОС ЗА 100. КОРОНАВИРУС</h1>
+							      </div>
+							      <div class="modal-body">
+							        <h1>Страна появления COVID-19?</h1>
+							        <div class="img" style="background-image: url(1kq.jpg);"></div>
+							        <p class="kq1 quiz">1) Япония</p>
+							        <p class="kq2 quiz">2) США</p>
+							        <p class="kq3 quiz">3) Китай</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-2 border border-warning question info17">
+							<p class="mt-2 infotext17" data-toggle="modal" data-target="#exampleModal17">200</p>
+							<div class="modal fade bd-example-modal-lg" id="exampleModal17" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel17" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title" id="exampleModalLabel17">ВОПРОС ЗА 200. КОРОНАВИРУС</h1>
+							      </div>
+							      <div class="modal-body">
+							       <h1>Топ-1 страна по заражённым коронавирусом?</h1>
+							       <div class="img" style="background-image: url(2kq.jpg);"></div>
+							        <p class="kq4 quiz">1) США</p>
+							        <p class="kq5 quiz">2) Испания</p>
+							        <p class="kq6 quiz">3) Италия</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-2 border border-warning question info18">
+							<p class="mt-2 infotext18" data-toggle="modal" data-target="#exampleModal18">300</p>
+							<div class="modal fade bd-example-modal-lg" id="exampleModal18" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel18" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title" id="exampleModalLabel18">ВОПРОС ЗА 300. КОРОНАВИРУС</h1>
+							      </div>
+							      <div class="modal-body">
+							      	<h1>На сколько метров от дома можно выходить на улицу?</h1>
+							      	<div class="img" style="background-image: url(3kq.jpg);"></div>
+							        <p class="kq7 quiz">1) 100 м</p>
+							        <p class="kq8 quiz">2) 500 м</p>
+							        <p class="kq9 quiz">3) 300 м</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-2 border border-warning question info19">
+							<p class="mt-2 infotext19" data-toggle="modal" data-target="#exampleModal19">400</p>
+							<div class="modal fade bd-example-modal-lg" id="exampleModal19" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel19" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title" id="exampleModalLabel19">ВОПРОС ЗА 400. КОРОНАВИРУС</h1>
+							      </div>
+							      <div class="modal-body">
+									<h1>Сколько официально подтверждённых случаев на территории Якутии?</h1>
+							        <div class="img" style="background-image: url(4kq.jpg);"></div>
+							        <p class="kq10 quiz">1) 5</p>
+							        <p class="kq11 quiz">2) 12</p>
+							        <p class="kq12 quiz">3) 16</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-2 border border-warning question info20">
+							<p class="mt-2 infotext20" data-toggle="modal" data-target="#exampleModal20">500</p>
+							<div class="modal fade bd-example-modal-lg" id="exampleModal20" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel20" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title" id="exampleModalLabel20">ВОПРОС ЗА 500. КОРОНАВИРУС</h1>
+							      </div>
+							      <div class="modal-body">
+							        <h1>В какой стране использовали сирену из "Судной ночи" для объявления о комендантском часе?</h1>
+							        <div class="img" style="background-image: url(5kq.jpg);"></div>
+							        <p class="kq13 quiz">1) Германия</p>
+							        <p class="kq14 quiz">2) США</p>
+							        <p class="kq15 quiz">3) Бельгия</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-2 border border-warning question info21">
+							<p class="mt-2 infotext21" data-toggle="modal" data-target="#exampleModal21">100</p>
+							<div class="modal fade bd-example-modal-lg" id="exampleModal21" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel21" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title" id="exampleModalLabel21">ВОПРОС ЗА 100. ИГРЫ</h1>
+							      </div>
+							      <div class="modal-body">
+							        <h1>Как называется эта игра?</h1>
+							        <div class="img" style="background-image: url(1gq.jpg);"></div>
+							        <p class="gq1 quiz">1) Jenga</p>
+							        <p class="gq2 quiz">2) Монополия</p>
+							        <p class="gq3 quiz">3) Построй-ка</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-2 border border-warning question info22">
+							<p class="mt-2 infotext22" data-toggle="modal" data-target="#exampleModal22">200</p>
+							<div class="modal fade bd-example-modal-lg" id="exampleModal22" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel22" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title" id="exampleModalLabel22">ВОПРОС ЗА 200. ИГРЫ</h1>
+							      </div>
+							      <div class="modal-body">
+							       <h1>Что за игра?</h1>
+							       <div class="img" style="background-image: url(2gq.jpg);"></div>
+							        <p class="gq4 quiz">1) Kingdom Comes</p>
+							        <p class="gq5 quiz">2) Dragon Age</p>
+							        <p class="gq6 quiz">3) Witcher: Wild Hunt</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-2 border border-warning question info23">
+							<p class="mt-2 infotext23" data-toggle="modal" data-target="#exampleModal23">300</p>
+							<div class="modal fade bd-example-modal-lg" id="exampleModal23" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel23" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title" id="exampleModalLabel23">ВОПРОС ЗА 300. ИГРЫ</h1>
+							      </div>
+							      <div class="modal-body">
+							        <h1>Какая игра относится к жанру платформер?</h1>
+							        <div class="img" style="background-image: url(3gq.jpg);"></div>
+							        <p class="gq7 quiz">1) Super Mario 3D World</p>
+							        <p class="gq8 quiz">2) Osu!</p>
+							        <p class="gq9 quiz">3) Minecraft</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-2 border border-warning question info24">
+							<p class="mt-2 infotext24" data-toggle="modal" data-target="#exampleModal24">400</p>
+							<div class="modal fade bd-example-modal-lg" id="exampleModal24" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel24" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title" id="exampleModalLabel24">ВОПРОС ЗА 400. ИГРЫ</h1>
+							      </div>
+							      <div class="modal-body">
+							       <h1>Кто создал Minecraft?</h1>
+							       <div class="img" style="background-image: url(4gq.jpg);"></div>
+							        <p class="gq10 quiz">1) Даррен Сагг</p>
+							        <p class="gq11 quiz">2) Маркус Перссон</p>
+							        <p class="gq12 quiz">3) Брендан Григ</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="col-2 border border-warning question info25">
+							<p class="mt-2 infotext25" data-toggle="modal" data-target="#exampleModal25">500</p>
+							<div class="modal fade bd-example-modal-lg" id="exampleModal25" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel25" aria-hidden="true">
+							  <div class="modal-dialog modal-lg" role="document">
+							    <div class="modal-content modal-question">
+							      <div>
+							      	<h1 class="modal-title" id="exampleModalLabel25">ВОПРОС ЗА 500. ИГРЫ</h1>
+							      </div>
+							      <div class="modal-body">
+							        <h1>Какая игра вышла неделю назад? (3 апреля)</h1>
+							        <div class="img" style="background-image: url(5gq.jpg);"></div>
+							        <p class="gq13 quiz">1) XCOM 3</p>
+							        <p class="gq14 quiz">2) Cyberpunk 2077</p>
+							        <p class="gq15 quiz">3) Resident Evil 3</p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<audio controls autoplay loop class="mt-5">
+			<source src="music.mp3">
+		</audio>
+		<div class="kot" style="display: none;">
+			<h2>Кот в мешке!</h2>
+			<button type="button" class="btn btn- font ml-5" data-toggle="modal" data-target="#exampleModall">ИГРАТЬ</button>
+				<div class="modal fade bd-example-modal-lg" id="exampleModall" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabell" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content modal-question">
+							<div>
+							   <h1 class="modal-title pravila text-center" id="exampleModalLabell" style="font-size: 50px;">Что за мультик?</h1>
+							</div>
+							<iframe class="mx-auto" width="560" height="315" src="https://www.youtube.com/embed/ShTdsoHH1To" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<div class="modal-body pravila text-center">
+							   <p class="vq1 quiz">1) Гравити Фолз</p>
+							   <p class="vq2 quiz">2) Рик и Морти</p>
+							   <p class="vq3 quiz">3) Время приключений</p>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		let game = document.querySelector('.btn-warning');
+		let welcome = document.querySelector('.welcome');
+		let logo = document.querySelector('.logo');
+		let questionbox = document.querySelector('.questionbox');
+		game.onclick = function(){
+			welcome.style.display = 'none';
+			logo.style.display = 'block';
+			questionbox.style.display = 'block';
+		}
+		let info1 = document.querySelector('.info1');
+		let infotext1 = document.querySelector('.infotext1');
+		info1.onclick = function(){
+			infotext1.style.transition = '1s';
+			infotext1.style.opacity = 0;
+		}
+		let info2 = document.querySelector('.info2');
+		let infotext2 = document.querySelector('.infotext2');
+		info2.onclick = function(){
+			infotext2.style.transition = '1s';
+			infotext2.style.opacity = 0;
+		}
+		let info3 = document.querySelector('.info3');
+		let infotext3 = document.querySelector('.infotext3');
+		info3.onclick = function(){
+			infotext3.style.transition = '1s';
+			infotext3.style.opacity = 0;
+		}
+		let info4 = document.querySelector('.info4');
+		let infotext4 = document.querySelector('.infotext4');
+		info4.onclick = function(){
+			infotext4.style.transition = '1s';
+			infotext4.style.opacity = 0;
+		}
+		let info5 = document.querySelector('.info5');
+		let infotext5 = document.querySelector('.infotext5');
+		info5.onclick = function(){
+			infotext5.style.transition = '1s';
+			infotext5.style.opacity = 0;
+		}
+		let info6 = document.querySelector('.info6');
+		let infotext6 = document.querySelector('.infotext6');
+		info6.onclick = function(){
+			infotext6.style.transition = '1s';
+			infotext6.style.opacity = 0;
+		}
+		let info7 = document.querySelector('.info7');
+		let infotext7 = document.querySelector('.infotext7');
+		info7.onclick = function(){
+			infotext7.style.transition = '1s';
+			infotext7.style.opacity = 0;
+		}
+		let info8 = document.querySelector('.info8');
+		let infotext8 = document.querySelector('.infotext8');
+		info8.onclick = function(){
+			infotext8.style.transition = '1s';
+			infotext8.style.opacity = 0;
+		}
+		let info9 = document.querySelector('.info9');
+		let infotext9 = document.querySelector('.infotext9');
+		info9.onclick = function(){
+			infotext9.style.transition = '1s';
+			infotext9.style.opacity = 0;
+		}
+		let info10 = document.querySelector('.info10');
+		let infotext10 = document.querySelector('.infotext10');
+		info10.onclick = function(){
+			infotext10.style.transition = '1s';
+			infotext10.style.opacity = 0;
+		}
+		let info11 = document.querySelector('.info11');
+		let infotext11 = document.querySelector('.infotext11');
+		info11.onclick = function(){
+			infotext11.style.transition = '1s';
+			infotext11.style.opacity = 0;
+		}
+		let info12 = document.querySelector('.info12');
+		let infotext12 = document.querySelector('.infotext12');
+		info12.onclick = function(){
+			infotext12.style.transition = '1s';
+			infotext12.style.opacity = 0;
+		}
+		let info13 = document.querySelector('.info13');
+		let infotext13 = document.querySelector('.infotext13');
+		info13.onclick = function(){
+			infotext13.style.transition = '1s';
+			infotext13.style.opacity = 0;
+		}
+		let info14 = document.querySelector('.info14');
+		let infotext14 = document.querySelector('.infotext14');
+		info14.onclick = function(){
+			infotext14.style.transition = '1s';
+			infotext14.style.opacity = 0;
+		}
+		let info15 = document.querySelector('.info15');
+		let infotext15 = document.querySelector('.infotext15');
+		info15.onclick = function(){
+			infotext15.style.transition = '1s';
+			infotext15.style.opacity = 0;
+		}
+		let info16 = document.querySelector('.info16');
+		let infotext16 = document.querySelector('.infotext16');
+		info16.onclick = function(){
+			infotext16.style.transition = '1s';
+			infotext16.style.opacity = 0;
+		}
+		let info17 = document.querySelector('.info17');
+		let infotext17 = document.querySelector('.infotext17');
+		info17.onclick = function(){
+			infotext17.style.transition = '1s';
+			infotext17.style.opacity = 0;
+		}
+		let info18 = document.querySelector('.info18');
+		let infotext18 = document.querySelector('.infotext18');
+		info18.onclick = function(){
+			infotext18.style.transition = '1s';
+			infotext18.style.opacity = 0;
+		}
+		let info19 = document.querySelector('.info19');
+		let infotext19 = document.querySelector('.infotext19');
+		info19.onclick = function(){
+			infotext19.style.transition = '1s';
+			infotext19.style.opacity = 0;
+		}
+		let info20 = document.querySelector('.info20');
+		let infotext20 = document.querySelector('.infotext20');
+		info20.onclick = function(){
+			infotext20.style.transition = '1s';
+			infotext20.style.opacity = 0;
+		}
+		let info21 = document.querySelector('.info21');
+		let infotext21 = document.querySelector('.infotext21');
+		info21.onclick = function(){
+			infotext21.style.transition = '1s';
+			infotext21.style.opacity = 0;
+		}
+		let info22 = document.querySelector('.info22');
+		let infotext22 = document.querySelector('.infotext22');
+		info22.onclick = function(){
+			infotext22.style.transition = '1s';
+			infotext22.style.opacity = 0;
+		}
+		let info23 = document.querySelector('.info23');
+		let infotext23 = document.querySelector('.infotext23');
+		info23.onclick = function(){
+			infotext23.style.transition = '1s';
+			infotext23.style.opacity = 0;
+		}
+		let info24 = document.querySelector('.info24');
+		let infotext24 = document.querySelector('.infotext24');
+		info24.onclick = function(){
+			infotext24.style.transition = '1s';
+			infotext24.style.opacity = 0;
+		}
+		let info25 = document.querySelector('.info25');
+		let infotext25 = document.querySelector('.infotext25');
+		info25.onclick = function(){
+			infotext25.style.transition = '1s';
+			infotext25.style.opacity = 0;
+		}
+		let score = 0;
+		scoreTxt = document.querySelector('.score');
+
+
+
+		//Скрипт для вопросов по информатике:
+		let iq1 = document.querySelector('.iq1');
+		let iq2 = document.querySelector('.iq2');
+		let iq3 = document.querySelector('.iq3');
+		let iq4 = document.querySelector('.iq4');
+		let iq5 = document.querySelector('.iq5');
+		let iq6 = document.querySelector('.iq6');
+		let iq7 = document.querySelector('.iq7');
+		let iq8 = document.querySelector('.iq8');
+		let iq9 = document.querySelector('.iq9');
+		let iq10 = document.querySelector('.iq10');
+		let iq11 = document.querySelector('.iq11');
+		let iq12 = document.querySelector('.iq12');
+		let iq13 = document.querySelector('.iq13');
+		let iq14 = document.querySelector('.iq14');
+		let iq15 = document.querySelector('.iq15');
+		iq1.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			iq1.style.color = 'red';
+			iq2.style.color = '#27cf38';
+		}
+		iq2.onclick = function(){
+			score = score + 100;
+			scoreTxt.innerHTML = score;
+			iq2.style.color = '#27cf38';
+		}
+		iq3.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			iq3.style.color = 'red';
+			iq2.style.color = '#27cf38';
+		}
+		iq4.onclick = function(){
+			score = score + 200;
+			scoreTxt.innerHTML = score;
+			iq4.style.color = '#27cf38';
+		}
+		iq5.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			iq5.style.color = 'red';
+			iq4.style.color = '#27cf38';
+		}
+		iq6.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			iq6.style.color = 'red';
+			iq4.style.color = '#27cf38';
+		}
+		iq7.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			iq7.style.color = 'red';
+			iq9.style.color = '#27cf38';
+		}
+		iq8.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			iq8.style.color = 'red';
+			iq9.style.color = '#27cf38';
+		}
+		iq9.onclick = function(){
+			score = score + 300;
+			scoreTxt.innerHTML = score;
+			iq9.style.color = '#27cf38';
+		}
+		iq10.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			iq10.style.color = 'red';
+			iq11.style.color = '#27cf38';
+		}
+		iq11.onclick = function(){
+			score = score + 400;
+			scoreTxt.innerHTML = score;
+			iq11.style.color = '#27cf38';
+		}
+		iq12.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			iq12.style.color = 'red';
+			iq11.style.color = '#27cf38';
+		}
+		iq13.onclick = function(){
+			score = score + 500;
+			scoreTxt.innerHTML = score;
+			iq13.style.color = '#27cf38';
+		}
+		iq14.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			iq14.style.color = 'red';
+			iq13.style.color = '#27cf38';
+		}
+		iq15.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			iq15.style.color = 'red';
+			iq13.style.color = '#27cf38';
+		}
+
+
+
+	//Скрипт для вопросов по фильмам:
+		let fq1 = document.querySelector('.fq1');
+		let fq2 = document.querySelector('.fq2');
+		let fq3 = document.querySelector('.fq3');
+		let fq4 = document.querySelector('.fq4');
+		let fq5 = document.querySelector('.fq5');
+		let fq6 = document.querySelector('.fq6');
+		let fq7 = document.querySelector('.fq7');
+		let fq8 = document.querySelector('.fq8');
+		let fq9 = document.querySelector('.fq9');
+		let fq10 = document.querySelector('.fq10');
+		let fq11 = document.querySelector('.fq11');
+		let fq12 = document.querySelector('.fq12');
+		let fq13 = document.querySelector('.fq13');
+		let fq14 = document.querySelector('.fq14');
+		let fq15 = document.querySelector('.fq15');
+		fq1.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			fq1.style.color = 'red';
+			fq2.style.color = '#27cf38';
+		}
+		fq2.onclick = function(){
+			score = score + 100;
+			scoreTxt.innerHTML = score;
+			fq2.style.color = '#27cf38';
+		}
+		fq3.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			fq3.style.color = 'red';
+			fq2.style.color = '#27cf38';
+		}
+		fq4.onclick = function(){
+			score = score + 200;
+			scoreTxt.innerHTML = score;
+			fq4.style.color = '#27cf38';
+		}
+		fq5.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			fq5.style.color = 'red';
+			fq4.style.color = '#27cf38';
+		}
+		fq6.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			fq6.style.color = 'red';
+			fq4.style.color = '#27cf38';
+		}
+		fq7.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			fq7.style.color = 'red';
+			fq9.style.color = '#27cf38';
+		}
+		fq8.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			fq8.style.color = 'red';
+			fq9.style.color = '#27cf38';
+		}
+		fq9.onclick = function(){
+			score = score + 300;
+			scoreTxt.innerHTML = score;
+			fq9.style.color = '#27cf38';
+		}
+		fq10.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			fq10.style.color = 'red';
+			fq11.style.color = '#27cf38';
+		}
+		fq11.onclick = function(){
+			score = score + 400;
+			scoreTxt.innerHTML = score;
+			fq11.style.color = '#27cf38';
+		}
+		fq12.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			fq12.style.color = 'red';
+			fq11.style.color = '#27cf38';
+		}
+		fq13.onclick = function(){
+			score = score + 500;
+			scoreTxt.innerHTML = score;
+			fq13.style.color = '#27cf38';
+		}
+		fq14.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			fq14.style.color = 'red';
+			fq13.style.color = '#27cf38';
+		}
+		fq15.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			fq15.style.color = 'red';
+			fq13.style.color = '#27cf38';
+		}
+
+
+
+	//Скрипт для вопросов по еде:
+		let eq1 = document.querySelector('.eq1');
+		let eq2 = document.querySelector('.eq2');
+		let eq3 = document.querySelector('.eq3');
+		let eq4 = document.querySelector('.eq4');
+		let eq5 = document.querySelector('.eq5');
+		let eq6 = document.querySelector('.eq6');
+		let eq7 = document.querySelector('.eq7');
+		let eq8 = document.querySelector('.eq8');
+		let eq9 = document.querySelector('.eq9');
+		let eq10 = document.querySelector('.eq10');
+		let eq11 = document.querySelector('.eq11');
+		let eq12 = document.querySelector('.eq12');
+		let eq13 = document.querySelector('.eq13');
+		let eq14 = document.querySelector('.eq14');
+		let eq15 = document.querySelector('.eq15');
+		eq1.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			eq1.style.color = 'red';
+			eq3.style.color = '#27cf38';
+		}
+		eq2.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			eq2.style.color = 'red';
+			eq3.style.color = '#27cf38';
+		}
+		eq3.onclick = function(){
+			score = score + 100;
+			scoreTxt.innerHTML = score;
+			eq3.style.color = '#27cf38';
+		}
+		eq4.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			eq4.style.color = 'red';
+			eq5.style.color = '#27cf38';
+		}
+		eq5.onclick = function(){
+			score = score + 200;
+			scoreTxt.innerHTML = score;
+			eq5.style.color = '#27cf38';
+		}
+		eq6.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			eq6.style.color = 'red';
+			eq5.style.color = '#27cf38';
+		}
+		eq7.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			eq7.style.color = 'red';
+			eq9.style.color = '#27cf38';
+		}
+		eq8.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			eq8.style.color = 'red';
+			eq9.style.color = '#27cf38';
+		}
+		eq9.onclick = function(){
+			score = score + 300;
+			scoreTxt.innerHTML = score;
+			eq9.style.color = '#27cf38';
+		}
+		eq10.onclick = function(){
+			score = score + 400;
+			scoreTxt.innerHTML = score;
+			eq10.style.color = '#27cf38';
+		}
+		eq11.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			eq11.style.color = 'red';
+			eq10.style.color = '#27cf38';
+		}
+		eq12.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			eq12.style.color = 'red';
+			eq10.style.color = '#27cf38';
+		}
+		eq13.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			eq13.style.color = 'red';
+			eq14.style.color = '#27cf38';
+		}
+		eq14.onclick = function(){
+			score = score + 500;
+			scoreTxt.innerHTML = score;
+			eq14.style.color = '#27cf38';
+		}
+		eq15.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			eq15.style.color = 'red';
+			eq14.style.color = '#27cf38';
+		}
+
+
+
+	//Скрипт вопросов про коронавирус:
+		let kq1 = document.querySelector('.kq1');
+		let kq2 = document.querySelector('.kq2');
+		let kq3 = document.querySelector('.kq3');
+		let kq4 = document.querySelector('.kq4');
+		let kq5 = document.querySelector('.kq5');
+		let kq6 = document.querySelector('.kq6');
+		let kq7 = document.querySelector('.kq7');
+		let kq8 = document.querySelector('.kq8');
+		let kq9 = document.querySelector('.kq9');
+		let kq10 = document.querySelector('.kq10');
+		let kq11 = document.querySelector('.kq11');
+		let kq12 = document.querySelector('.kq12');
+		let kq13 = document.querySelector('.kq13');
+		let kq14 = document.querySelector('.kq14');
+		let kq15 = document.querySelector('.kq15');
+		kq1.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			kq1.style.color = 'red';
+			kq3.style.color = '#27cf38';
+		}
+		kq2.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			kq2.style.color = 'red';
+			kq3.style.color = '#27cf38';
+		}
+		kq3.onclick = function(){
+			score = score + 100;
+			scoreTxt.innerHTML = score;
+			kq3.style.color = '#27cf38';
+		}
+		kq4.onclick = function(){
+			score = score + 200;
+			scoreTxt.innerHTML = score;
+			kq4.style.color = '#27cf38';
+		}
+		kq5.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			kq5.style.color = 'red';
+			kq4.style.color = '#27cf38';
+		}
+		kq6.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			kq6.style.color = 'red';
+			kq4.style.color = '#27cf38';
+		}
+		kq7.onclick = function(){
+			score = score + 300;
+			scoreTxt.innerHTML = score;
+			kq7.style.color = '#27cf38';
+		}
+		kq8.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			kq8.style.color = 'red';
+			kq7.style.color = '#27cf38';
+		}
+		kq9.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			kq9.style.color = 'red';
+			kq7.style.color = '#27cf38';
+		}
+		kq10.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			kq10.style.color = 'red';
+			kq12.style.color = '#27cf38';
+		}
+		kq11.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			kq11.style.color = 'red';
+			kq12.style.color = '#27cf38';
+		}
+		kq12.onclick = function(){
+			score = score + 400;
+			scoreTxt.innerHTML = score;
+			kq12.style.color = '#27cf38';
+		}
+		kq13.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			kq13.style.color = 'red';
+			kq14.style.color = '#27cf38';
+		}
+		kq14.onclick = function(){
+			score = score + 500;
+			scoreTxt.innerHTML = score;
+			kq14.style.color = '#27cf38';
+		}
+		kq15.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			kq15.style.color = 'red';
+			kq14.style.color = '#27cf38';
+		}
+
+
+
+	//Скрипт вопросов про компьютерные игры:
+		let gq1 = document.querySelector('.gq1');
+		let gq2 = document.querySelector('.gq2');
+		let gq3 = document.querySelector('.gq3');
+		let gq4 = document.querySelector('.gq4');
+		let gq5 = document.querySelector('.gq5');
+		let gq6 = document.querySelector('.gq6');
+		let gq7 = document.querySelector('.gq7');
+		let gq8 = document.querySelector('.gq8');
+		let gq9 = document.querySelector('.gq9');
+		let gq10 = document.querySelector('.gq10');
+		let gq11 = document.querySelector('.gq11');
+		let gq12 = document.querySelector('.gq12');
+		let gq13 = document.querySelector('.gq13');
+		let gq14 = document.querySelector('.gq14');
+		let gq15 = document.querySelector('.gq15');
+		gq1.onclick = function(){
+			score = score + 100;
+			scoreTxt.innerHTML = score;
+			gq1.style.color = '#27cf38';
+		}
+		gq2.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			gq2.style.color = 'red';
+			gq1.style.color = '#27cf38';
+		}
+		gq3.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			gq3.style.color = 'red';
+			gq1.style.color = '#27cf38';
+		}
+		gq4.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			gq4.style.color = 'red';
+			gq6.style.color = '#27cf38';
+		}
+		gq5.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			gq5.style.color = 'red';
+			gq6.style.color = '#27cf38';
+		}
+		gq6.onclick = function(){
+			score = score + 200;
+			scoreTxt.innerHTML = score;
+			gq6.style.color = '#27cf38';
+		}
+		gq7.onclick = function(){
+			score = score + 300;
+			scoreTxt.innerHTML = score;
+			gq7.style.color = '#27cf38';
+		}
+		gq8.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			gq8.style.color = 'red';
+			gq7.style.color = '#27cf38';
+		}
+		gq9.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			gq9.style.color = 'red';
+			gq7.style.color = '#27cf38';
+		}
+		gq10.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			gq10.style.color = 'red';
+			gq11.style.color = '#27cf38';
+		}
+		gq11.onclick = function(){
+			score = score + 400;
+			scoreTxt.innerHTML = score;
+			gq11.style.color = '#27cf38';
+		}
+		gq12.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			gq12.style.color = 'red';
+			gq11.style.color = '#27cf38';
+		}
+		gq13.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			gq13.style.color = 'red';
+			gq15.style.color = '#27cf38';
+		}
+		gq14.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			gq14.style.color = 'red';
+			gq15.style.color = '#27cf38';
+		}
+		gq15.onclick = function(){
+			score = score + 500;
+			scoreTxt.innerHTML = score;
+			gq15.style.color = '#27cf38';
+		}
+		//*Кот в мешке!
+		let vq1 = document.querySelector('.vq1');
+		let vq2 = document.querySelector('.vq2');
+		let vq3 = document.querySelector('.vq3');
+		vq1.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			vq1.style.color = 'red';
+			vq3.style.color = '#27cf38';
+			kot.style.display = 'block';
+			questionbox.style.display = 'block';
+		}
+		vq2.onclick = function(){
+			score = score + 0;
+			scoreTxt.innerHTML = score;
+			vq2.style.color = 'red';
+			vq3.style.color = '#27cf38';
+			kot.style.display = 'block';
+			questionbox.style.display = 'block';
+		}
+		vq3.onclick = function(){
+			score = score + 1000;
+			scoreTxt.innerHTML = score;
+			vq3.style.color = '#27cf38';
+			kot.style.display = 'block';
+			questionbox.style.display = 'block';
+		}
+	</script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>
